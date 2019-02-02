@@ -7,7 +7,9 @@ pool:
 steps:
 - task: CopyFiles@2
   inputs: 
-    contents: '*.yml'
+    contents: |
+      '*.yml'
+      '!azure-pipelines.yml'
     targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:
