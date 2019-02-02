@@ -6,8 +6,8 @@ pool:
 
 steps:
 - task: CopyFiles@2
-  inputs:
-    contents: *.yml
+  inputs: 
+    contents: '*.yml'
     targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:
